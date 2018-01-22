@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 
 cache:
     directories:
@@ -9,7 +9,7 @@ script:
     - rm -rf res/initramfs/boot/config.txt build_dir ./*.zip ./*.xz ./*.bz2
     - ./update.sh
     - ./build.sh
-    - ./buildroot.sh
+    - sudo ./buildroot.sh
 
 addons:
     apt:
