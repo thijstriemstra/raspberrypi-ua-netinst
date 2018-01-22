@@ -121,12 +121,12 @@ download_file() {
 	local download_source=$1
 	local download_target=$2
 	if [ -z "${download_target}" ]; then
-		if ! wget -q --show-progress --no-cache "${download_source}"; then
+		if ! wget -q --no-cache "${download_source}"; then
 			echo -e "ERROR\nDownloading file '${download_source}' failed! Exiting."
 			exit 1
 		fi
 	else
-		if ! wget -q --show-progress --no-cache -O "${download_target}" "${download_source}"; then
+		if ! wget -q --no-cache -O "${download_target}" "${download_source}"; then
 			echo -e "ERROR\nDownloading file '${download_source}' failed! Exiting."
 			exit 1
 		fi
