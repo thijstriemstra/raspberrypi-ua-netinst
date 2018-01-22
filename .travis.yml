@@ -8,8 +8,6 @@ script:
 
 addons:
     apt:
-        sources:
-            - sourceline: 'ppa:ubuntu/trusty/wget'
         packages:
             - git
             - curl
