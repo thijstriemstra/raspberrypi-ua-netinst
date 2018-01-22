@@ -1,8 +1,12 @@
 sudo: false
 
+cache:
+    directories:
+        - packages
+
 script:
     - wget --version
-    - ./clean.sh
+    - rm -rf res/initramfs/boot/config.txt build_dir ./*.zip ./*.xz ./*.bz2
     - ./update.sh
     - ./build.sh
     - ./buildroot.sh
