@@ -1,8 +1,10 @@
-sudo: true
+sudo: false
 
 script:
+    - wget --version
     - ./clean.sh
     - ./update.sh
+    - ./build.sh
 
 addons:
     apt:
