@@ -9,7 +9,7 @@ script:
 addons:
     apt:
         sources:
-            - sourceline: 'ppa:ubuntu/wget'
+            - sourceline: 'ppa:ubuntu/trusty/wget'
         packages:
             - git
             - curl
