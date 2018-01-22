@@ -1,0 +1,26 @@
+sudo: true
+
+cache:
+    directories:
+        - packages
+
+script:
+    - wget --version
+    - rm -rf res/initramfs/boot/config.txt build_dir ./*.zip ./*.xz ./*.bz2
+    - ./update.sh
+    - ./build.sh
+    - sudo ./buildroot.sh
+
+addons:
+    apt:
+        packages:
+            - git
+            - curl
+            - bzip2
+            - zip
+            - xz-utils
+            - gnupg
+            - kpartx
+            - dosfstools
+            - binutils
+            - bc
