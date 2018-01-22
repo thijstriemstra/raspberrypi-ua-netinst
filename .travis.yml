@@ -8,6 +8,8 @@ script:
 
 addons:
     apt:
+        sources:
+            - sourceline: 'ppa:ubuntu/wget'
         packages:
             - git
             - curl
