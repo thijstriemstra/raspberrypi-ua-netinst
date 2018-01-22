@@ -1,5 +1,9 @@
 sudo: true
 
+script:
+    - ./clean.sh
+    - ./update.sh
+
 addons:
     apt:
         packages:
